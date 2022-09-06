@@ -1,2 +1,5 @@
 import './style.css';
-import './api.js'
+import './api.js';
+if (module.hot) {
+    module.hot.accept();
+}
