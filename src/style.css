@@ -11,15 +11,119 @@ html, body {
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url("./usgs-hoS3dzgpHzw-unsplash.jpg");
+    background-position: left center;
+    overflow:scroll;
+}
+
+:root {
+    --main-color: #fefefe85;
+    --color1: #c998ad;
+    --color2: #d8adbe;
+}
+
+.header {
+    margin-bottom: auto;
+    background-color: #fefefe85;
+    padding: 0 20px;
+    font-size: 0.9rem;
+}
+
+.header, .container, #search, 
+#btn, #gif {
+    border-radius: 5px;
 }
 
 .container {
     display: flex;
     flex-direction: column;
+    background-color: var(--main-color);
+    padding: 20px 30px;
+    min-width: 250px;
+    min-height: 450px;
+    margin-bottom: auto;
+}
+
+.header, .container{
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+.container, .content > * {
+    max-width: 100vw;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#search, #btn {
+    font-size: 2rem;
+    outline: none;
+    border: solid 1px black;
+}
+
+#search, #btn, 
+.result, .details {
+    margin-bottom: 15px;
+}
+
+#btn {
+    background-color: var(--color1);
+    color: white;   
+}
+
+#btn:hover {
+    background-color: var(--color2);
+}
+#btn:hover, footer a:hover {
+    cursor: pointer;
+}
+
+.result span {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: auto 5px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data, .result {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.gifContainer {
+    display: flex;
+    justify-content: center;
 }
 
 #gif {
     max-width: 300px;
+    max-height: 300px;
+}
+
+footer {
+    background-color: var(--color2);
+    width: 100vw;
+    text-align: center;
+    padding: 4px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
 }

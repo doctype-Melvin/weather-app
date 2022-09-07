@@ -25,7 +25,7 @@ export function getWeather(value){
         temp.textContent = `Temperature: ${response.main.temp} Celcius`;
         wind.textContent = `Wind speed: ${response.wind.speed} kmh`;
         perc.textContent = `Percipitation: ${response.weather[0].description}`;
-        getGif(response.weather[0].description + ' anime') //Calls GIF function
+        getGif('anime ' + response.weather[0].description) //Calls GIF function
         document.querySelector('.forecast').reset()
     })
     .catch(function(){
