@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
   
-<script defer src="runtime.bundle.js?3b1e88b1891fe44eea0e"></script><script defer src="index.bundle.js?3b1e88b1891fe44eea0e"></script></head>
+<script defer src="runtime.bundle.js?7db571aceee4fe46d04f"></script><script defer src="index.bundle.js?7db571aceee4fe46d04f"></script></head>
 <body>
     <div class="container">
         <div class="header">
@@ -14,11 +14,21 @@
         </div>
         <div class="content">
             <form action="#" class="forecast">
-                <label for="search">Search</label>
+                <label for="search"></label>
                 <input type="text" name="search" id="search" class="search" placeholder="Enter City">
-                <button type="submit">OK</button>
+                <button type="submit" id="btn">OK</button>
             </form>
-            <div class="display">Here's the forecast</div>
+            <div class="display">
+                <div class="result">The current weather in <span id="city">...</span></div>
+                <div class="details">
+                    <div id="temp"></div>
+                    <div id="wind"></div>
+                    <div id="perc"></div>
+                </div>
+                <div class="gifContainer">
+                    <img src="#" alt="" id="gif">
+                </div>
+            </div>
         </div>
     </div>
 </body>
