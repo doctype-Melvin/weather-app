@@ -1,4 +1,8 @@
+import { getGif } from "./interaction";
 
+//Weather API
+//Sets text contents to weather data
+//Calls GIF API function
 export function getWeather(value){
     const city = document.getElementById('city');
     const temp = document.getElementById('temp');
@@ -20,7 +24,9 @@ export function getWeather(value){
         city.textContent = response.name || response.message;
         temp.textContent = `Temperature: ${response.main.temp} Celcius`;
         wind.textContent = `Wind speed: ${response.wind.speed} kmh`;
-        perc.textContent = `Percipitation: ${response.weather[0].description}`
+        perc.textContent = `Percipitation: ${response.weather[0].description}`;
+        getGif(response.weather[0].description + ' anime') //Calls GIF function
+        document.querySelector('.forecast').reset()
     })
     .catch(function(){
         clearResults();

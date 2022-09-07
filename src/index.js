@@ -4,3 +4,4 @@ import './interaction.js'
 if (module.hot) {
     module.hot.accept();
 }
+document.querySelector('.forecast').reset()
