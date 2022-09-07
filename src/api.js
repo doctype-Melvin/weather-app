@@ -1,7 +1,5 @@
-const display = document.querySelector('.display');
-const btn = document.getElementById('btn');
 
-function getWeather(value){
+export function getWeather(value){
     const city = document.getElementById('city');
     const temp = document.getElementById('temp');
     const wind = document.getElementById('wind');
@@ -28,9 +26,3 @@ function getWeather(value){
         clearResults();
     });
 }
-btn.addEventListener('click', (e) => {
-    const search = document.getElementById('search')
-    console.log(search.value);
-    getWeather(search.value)
-    e.preventDefault()
-})
