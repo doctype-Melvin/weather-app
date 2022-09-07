@@ -15,7 +15,7 @@ export function getWeather(value){
         perc.textContent = '';
     }
 
-    return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${value}&appid=11558c3112856939631bac223b8cddb5&units=metric`, {mode: 'cors'})
+    return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=11558c3112856939631bac223b8cddb5&units=metric`, {mode: 'cors'})
     .then(function(response) {
         return response.json()
     })
